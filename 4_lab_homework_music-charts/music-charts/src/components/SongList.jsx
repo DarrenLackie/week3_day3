@@ -3,9 +3,9 @@ import Song from './Song';
 
 
 
-const SongList = ({songs}) => {
+const SongList = ({songs, index}) => {
     const songItems = songs.map((song) => {
-        return <Song song={song} />
+        return <Song song={song} key={index}/>
     })
     return (
         <>

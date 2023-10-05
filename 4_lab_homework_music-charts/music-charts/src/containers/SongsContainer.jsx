@@ -14,6 +14,7 @@ const SongsContainer = () => {
     fetch("https://itunes.apple.com/gb/rss/topsongs/limit=20/json")
     .then(response => response.json())
     .then((data) => {setSongs(data.feed.entry)})
+    .catch((err) => console.error(`Error : ${err}`))
 
     }
 
